@@ -1,0 +1,217 @@
+/* Global reset and frame setup matching 1440x1800 Figma frame */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: 'Nunito', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #000 url('./assets/bg-hero.png') center top / cover no-repeat fixed;
+  color: #000;
+}
+
+.frame {
+  position: relative;
+  width: 1440px;
+  height: 1800px;
+  margin: 0 auto;
+}
+
+/* Brand */
+.brand-mark {
+  position: absolute;
+  left: 114px;
+  top: 28px;
+  width: 55px;
+  height: 50px;
+  object-fit: cover;
+}
+.brand-text {
+  position: absolute;
+  left: 185px;
+  top: 30px;
+  width: 155px;
+  height: 45px;
+  font-weight: 800;
+  font-size: 25px;
+  line-height: 1.8em;
+}
+
+/* Title and subtitle */
+.title {
+  position: absolute;
+  left: 346px;
+  top: 155px;
+  width: 728px;
+  height: 102px;
+  margin: 0;
+  font-weight: 700;
+  font-size: 75px;
+  line-height: 1.364em;
+}
+.subtitle {
+  position: absolute;
+  left: 332px;
+  top: 257px;
+  width: 772px;
+  height: 82px;
+  margin: 0;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 1.364em;
+  text-align: center;
+}
+
+/* Upload button */
+.upload-btn {
+  position: absolute;
+  left: 1076px;
+  top: 424px;
+  width: 236px;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  background: #2CFF05;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.25);
+}
+.cloud-icon {
+  display: inline-flex;
+  width: 35px;
+  height: 35px;
+}
+.upload-text {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+/* Glass bar */
+.glass-bar {
+  position: absolute;
+  left: 100px;
+  top: 395px;
+  width: 1240px;
+  height: 115px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(26px);
+}
+
+/* KPI overlays near cards */
+.kpi-label.kpi-excellent {
+  position: absolute;
+  left: 130px;
+  top: 612px;
+  width: 202px;
+  height: 61px;
+  font-weight: 900;
+  font-size: 45px;
+  color: #22C55E;
+}
+.kpi-value.kpi-mean {
+  position: absolute;
+  left: 497px;
+  top: 612px;
+  width: 120px;
+  height: 61px;
+  font-weight: 700;
+  font-size: 45px;
+}
+.kpi-value.kpi-std {
+  position: absolute;
+  left: 818px;
+  top: 612px;
+  width: 120px;
+  height: 61px;
+  font-weight: 700;
+  font-size: 45px;
+}
+.kpi-heading {
+  position: absolute;
+  font-weight: 900;
+  font-size: 25px;
+}
+.kpi-reco { left: 1115px; top: 577px; width: 211px; height: 34px; }
+.kpi-health { left: 141px; top: 578px; width: 148px; height: 34px; }
+.kpi-mean-label { left: 524px; top: 575px; width: 66px; height: 34px; }
+.kpi-std-label { left: 765px; top: 575px; width: 236px; height: 34px; }
+
+/* Cards row */
+.card {
+  position: absolute;
+  width: 256px;
+  height: 150px;
+  top: 556px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.25);
+}
+.card-1 { left: 100px; box-shadow: none; }
+.card-2 { left: 425px; }
+.card-3 { left: 750px; }
+.card-4 { left: 1084px; box-shadow: none; }
+.with-left-border { border-left: 10px solid #22C55E; }
+
+/* Panels */
+.panel {
+  position: absolute;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.25);
+}
+.panel-left { left: 100px; top: 775px; width: 610px; height: 467px; }
+.panel-right { left: 730px; top: 775px; width: 610px; height: 467px; }
+.panel-bottom-left { left: 100px; top: 1295px; width: 610px; height: 405px; box-shadow: none; }
+.panel-bottom-right { left: 730px; top: 1295px; width: 610px; height: 405px; }
+.panel-title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 24px;
+  margin: 0 auto;
+  width: max-content;
+  font-weight: 700;
+  font-size: 35px;
+}
+.panel-left .panel-title { left: 185px; top: 802px; }
+.panel-right .panel-title { left: 817px; top: 802px; }
+.panel-bottom-left .panel-title { left: 205px; top: 1326px; }
+.panel-bottom-right .panel-title { left: 780px; top: 1326px; }
+
+/* Ellipse photo on right */
+.ellipse-photo {
+  position: absolute;
+  left: 1223px;
+  top: 110px;
+  width: 180px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #000;
+}
+
+/* Center badge */
+.center-badge {
+  position: absolute;
+  left: 1130px;
+  top: -161px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 800;
+  font-size: 45px;
+  text-align: center;
+  background: transparent;
+}
+.center-badge-line { line-height: 1; }
+
+/* Accessibility */
+.upload-btn:focus { outline: 3px solid #1dbb00; outline-offset: 2px; }
+
