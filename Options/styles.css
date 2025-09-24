@@ -1,0 +1,158 @@
+/* Canvas setup to match Figma frame 1440 x 1024 */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Nunito', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: #000;
+}
+
+#canvas {
+  position: relative;
+  width: 1440px;
+  height: 1024px;
+  margin: 0 auto;
+  background-image: url('assets/bg-hero-11ac00.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.header-strip {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 1440px;
+  height: 100px;
+  background: rgba(255,255,255,0.08);
+  -webkit-backdrop-filter: blur(40px);
+  backdrop-filter: blur(40px);
+}
+
+.logo {
+  position: absolute;
+  left: 117px;
+  top: 31px;
+  width: 55px;
+  height: 50px;
+  object-fit: fill;
+}
+
+.brand {
+  position: absolute;
+  left: 185px;
+  top: 30px;
+  width: 155px;
+  height: 45px;
+  color: #000000;
+  font-weight: 800;
+  font-size: 25px;
+  line-height: 1.8;
+}
+
+.avatar {
+  position: absolute;
+  left: 1272px;
+  top: 19px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Cards */
+.card {
+  position: absolute;
+  background: linear-gradient(141deg, rgba(0,0,0,0.55) 0%, rgba(255,255,255,0.25) 100%);
+  box-shadow: 0px 8px 15px rgba(0,0,0,0.35);
+  border-radius: 10px;
+  -webkit-backdrop-filter: blur(22px);
+  backdrop-filter: blur(22px);
+  border: 1px solid rgba(255,255,255,0.35);
+  overflow: hidden;
+  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 16px 30px rgba(0,0,0,0.4);
+  background: linear-gradient(141deg, rgba(0,0,0,0.45) 0%, rgba(255,255,255,0.35) 100%);
+  border-color: rgba(255,255,255,0.55);
+}
+
+.card-moisture { left: 185px; top: 195px; width: 315px; height: 282px; }
+.card-leaf { left: 561px; top: 195px; width: 315px; height: 282px; }
+.card-crop { left: 937px; top: 195px; width: 315px; height: 282px; }
+.card-temp { left: 384px; top: 572px; width: 315px; height: 282px; }
+.card-report { left: 766px; top: 571px; width: 315px; height: 282px; }
+
+/* Icons positions (50x50) */
+.icon { position: absolute; width: 50px; height: 50px; }
+.icon-water { left: 217px; top: 221px; }
+.icon-leaf { left: 605px; top: 221px; }
+.icon-harvest { left: 981px; top: 229px; }
+.icon-thermo { left: 415px; top: 594px; }
+.icon-diagram { left: 799px; top: 607px; }
+
+/* Titles */
+.title {
+  position: absolute;
+  color: #FFFFFF;
+  font-weight: 900;
+  line-height: 1.125;
+}
+
+.title-moisture { left: 217px; top: 287px; width: 171px; height: 45px; font-size: 40px; }
+.title-leaf { left: 589px; top: 282px; width: 264px; height: 45px; font-size: 40px; }
+.title-crop { left: 965px; top: 291px; width: 237px; height: 45px; font-size: 40px; }
+.title-temp { left: 418px; top: 652px; width: 265px; height: 90px; font-size: 35px; line-height: 1.2857142857; }
+.title-report { left: 791px; top: 686px; width: 256px; height: 45px; font-size: 40px; }
+
+/* Subtitles */
+.subtitle {
+  position: absolute;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 1.4705882353;
+}
+
+.subtitle-moisture { left: 215px; top: 348px; width: 256px; height: 25px; }
+.subtitle-leaf { left: 593px; top: 336px; width: 256px; height: 50px; }
+.subtitle-crop { left: 967px; top: 348px; width: 256px; height: 25px; }
+.subtitle-temp { left: 415px; top: 751px; width: 256px; height: 25px; }
+.subtitle-report { left: 796px; top: 751px; width: 256px; height: 25px; }
+
+/* Lines */
+.line { position: absolute; height: 0px; border-top: 1px solid #FFFFFF; }
+.line-1 { left: 214px; top: 406.99px; width: 260px; }
+.line-2 { left: 589px; top: 407px; width: 260px; }
+.line-3 { left: 965px; top: 407px; width: 260px; }
+.line-7 { left: 411px; top: 791px; width: 260px; }
+.line-6 { left: 799px; top: 791px; width: 260px; }
+
+/* CTAs */
+.cta {
+  position: absolute;
+  color: #FFFFFF;
+  font-weight: 900;
+  font-size: 15px;
+  line-height: 1.6666666667;
+  cursor: pointer;
+  transition: letter-spacing 160ms ease, text-shadow 160ms ease, opacity 160ms ease;
+}
+
+.cta-1 { left: 222px; top: 427px; width: 145px; height: 25px; }
+.cta-2 { left: 605px; top: 427px; width: 145px; height: 25px; }
+.cta-3 { left: 986px; top: 423px; width: 145px; height: 25px; }
+.cta-4 { left: 415px; top: 808px; width: 145px; height: 25px; }
+.cta-5 { left: 799px; top: 808px; width: 145px; height: 25px; }
+
+.cta:hover {
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 12px rgba(255,255,255,0.85);
+  opacity: 0.95;
+}
+
+
