@@ -1,0 +1,186 @@
+:root {
+	--green-strong: #1DB202;
+	--green-cta: #26E203;
+	--green-cta-hover: #21CC03;
+	--black: #000000;
+	--white: #FFFFFF;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	font-family: 'Nunito', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+	background: var(--white);
+}
+
+body {
+	display: grid;
+	place-items: center;
+	min-height: 100vh;
+}
+
+.artboard {
+	position: relative;
+	width: 1440px;
+	height: 1024px;
+	background-image: url('assets/bg-hero-634589.png');
+	background-size: 100% 100%; /* STRETCH to match Figma */
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+
+/* Panel (Rectangle 2) */
+#panel {
+	position: absolute;
+	left: 395px;
+	top: 170px;
+	width: 646px;
+	height: 704px;
+	/* semi-transparent gradient to allow background to show through */
+	background: linear-gradient(141deg, rgba(0,0,0,0.60) 0%, rgba(255,255,255,0.60) 100%);
+	/* blur background behind the panel when supported */
+	-webkit-backdrop-filter: blur(25.9px);
+	backdrop-filter: blur(25.9px);
+	box-shadow: 0px 8px 15px 0px rgba(0,0,0,0.25);
+	border-radius: 15px;
+	border: 1px solid rgba(255,255,255,0.15);
+	z-index: 1; /* behind content */
+}
+
+/* Logo (Rectangle 21 image) */
+#logo {
+	position: absolute;
+	left: 670px;
+	top: 170px;
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+	z-index: 2;
+}
+
+/* Title */
+#title {
+	position: absolute;
+	left: 487px;
+	top: 268px;
+	margin: 0;
+	color: var(--green-strong);
+	font-weight: 900;
+	font-size: 45px;
+	line-height: 1;
+	z-index: 3;
+}
+
+/* Subtitle */
+#subtitle {
+	position: absolute;
+	left: 573px;
+	top: 316px;
+	margin: 0;
+	color: var(--black);
+	font-weight: 300;
+	font-size: 25px;
+	line-height: 1.8;
+	z-index: 3;
+}
+
+/* Labels */
+#label-username {
+	position: absolute;
+	left: 455px;
+	top: 406px;
+	color: var(--black);
+	font-weight: 700;
+	font-size: 25px;
+	line-height: 1.8;
+	z-index: 3;
+}
+
+#label-password {
+	position: absolute;
+	left: 455px;
+	top: 544px;
+	color: var(--black);
+	font-weight: 700;
+	font-size: 25px;
+	line-height: 1.8;
+	z-index: 3;
+}
+
+/* Inputs (Rectangles 18 and 19) */
+#username, #password {
+	position: absolute;
+	left: 455px;
+	width: 526px;
+	height: 71px;
+	border: none;
+	border-radius: 15px;
+	background: var(--white);
+	padding: 0 20px;
+	font-size: 22px;
+	font-weight: 700;
+	font-family: inherit; /* ensure Nunito */
+	color: var(--black);
+	outline: none;
+	z-index: 2;
+}
+
+#username { top: 451px; }
+#password { top: 592px; }
+
+/* Sign In (Rectangle 20 + text) */
+#sign-in {
+	position: absolute;
+	left: 455px;
+	top: 683px;
+	width: 526px;
+	height: 50px;
+	border: none;
+	border-radius: 15px;
+	background: var(--green-cta);
+	color: var(--white);
+	font-weight: 700;
+	font-size: 25px;
+	line-height: 50px; /* exact vertical center */
+	text-align: center;
+	box-shadow: 0px 8px 15px 0px rgba(0,0,0,0.25);
+	cursor: pointer;
+	z-index: 2;
+	font-family: inherit; /* ensure Nunito */
+	transition: background-color 120ms ease, transform 120ms ease, box-shadow 120ms ease;
+}
+
+#sign-in:hover {
+	background: var(--green-cta-hover);
+	transform: translateY(-1px);
+	box-shadow: 0 10px 18px rgba(0,0,0,0.28);
+}
+
+#sign-in:active {
+	transform: translateY(0);
+}
+
+#sign-in:focus-visible {
+	outline: 2px solid rgba(0,0,0,0.25);
+	outline-offset: 2px;
+}
+
+#username:focus, #password:focus {
+	box-shadow: 0 0 0 3px rgba(38,226,3,0.3);
+}
+
+.input-error {
+	box-shadow: 0 0 0 3px rgba(255,0,0,0.35) !important;
+	animation: shake 180ms ease-in-out 0s 2;
+}
+
+@keyframes shake {
+	0% { transform: translateX(0); }
+	25% { transform: translateX(-4px); }
+	50% { transform: translateX(4px); }
+	75% { transform: translateX(-2px); }
+	100% { transform: translateX(0); }
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>AgriSense AI</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;700;900&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+	<div class="artboard" role="main">
+		<!-- Logo -->
+		<img id="logo" src="assets/logo.png" alt="AgriSense AI" />
+
+		<!-- Title & Subtitle -->
+		<h1 id="title">AgriSense Dashboard</h1>
+		<p id="subtitle">Welcome back to your farm</p>
+
+		<!-- Panel -->
+		<div id="panel" aria-hidden="true"></div>
+
+		<!-- Labels -->
+		<label id="label-username" for="username">Username</label>
+		<label id="label-password" for="password">Password</label>
+
+		<!-- Inputs -->
+		<input id="username" type="text" autocomplete="username" />
+		<input id="password" type="password" autocomplete="current-password" />
+
+		<!-- Button -->
+		<button id="sign-in" type="button">Sign In</button>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
