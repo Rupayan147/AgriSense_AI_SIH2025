@@ -1,0 +1,367 @@
+/* AgriSense AI Dashboard - Complete Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-image: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    overflow-x: auto;
+}
+
+.dashboard-container {
+    width: 1440px;
+    height: 1800px;
+    position: relative;
+    margin: 0 auto;
+}
+
+/* Header Section */
+.header {
+    position: absolute;
+    left: 100px;
+    top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-icon {
+    width: 55px;
+    height: 50px;
+    border-radius: 8px;
+}
+
+.logo-text {
+    color: black;
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 45px;
+    text-shadow: 2px 2px 4px rgba(255,255,255,0.8);
+}
+
+/* Full Report Circle */
+.report-circle {
+    position: absolute;
+    left: 1113px;
+    top: -172px;
+}
+
+.report-circle img {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 3px solid rgba(0,0,0,0.3);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.report-circle img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+}
+
+.report-label {
+    position: absolute;
+    left: 80px;
+    top: 288px;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 45px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
+/* Main Title Section */
+.main-title {
+    position: absolute;
+    left: 346px;
+    top: 155px;
+    text-align: center;
+}
+
+.dashboard-title {
+    color: black;
+    font-size: 75px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(255,255,255,0.8);
+}
+
+.dashboard-subtitle {
+    width: 772px;
+    color: black;
+    font-size: 30px;
+    font-weight: 300;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+}
+
+/* Search Bar */
+.search-bar {
+    position: absolute;
+    left: 100px;
+    top: 395px;
+    width: 1240px;
+    height: 115px;
+    background: rgba(255, 254.75, 254.75, 0.25);
+    border-radius: 10px;
+    backdrop-filter: blur(12.95px);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 40px;
+}
+
+.upload-btn {
+    width: 236px;
+    height: 50px;
+    background: #2CFF05;
+    border: none;
+    border-radius: 10px;
+    color: black;
+    font-size: 24px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.upload-btn:hover {
+    background: #25D900;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(44, 255, 5, 0.3);
+}
+
+.upload-icon {
+    font-size: 20px;
+}
+
+/* Metrics Row */
+.metrics-row {
+    position: absolute;
+    left: 100px;
+    top: 556px;
+    display: flex;
+    gap: 69px;
+}
+
+.metric-card {
+    width: 256px;
+    height: 150px;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.metric-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.metric-card.excellent {
+    border-left: 5px solid #22C55E;
+}
+
+.metric-card.moderate {
+    border-left: 5px solid #2386F6;
+}
+
+.metric-card.low {
+    border-left: 5px solid #EF4444;
+}
+
+.metric-label {
+    color: black;
+    font-size: 24px;
+    font-weight: 900;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.metric-value {
+    font-size: 45px;
+    font-weight: 900;
+}
+
+.status-excellent {
+    color: #22C55E;
+    text-shadow: 1px 1px 2px rgba(34, 197, 94, 0.3);
+}
+
+.status-moderate {
+    color: #2386F6;
+    text-shadow: 1px 1px 2px rgba(35, 134, 246, 0.3);
+}
+
+.status-low {
+    color: #EF4444;
+    text-shadow: 1px 1px 2px rgba(239, 68, 68, 0.3);
+    animation: pulse 2s infinite;
+}
+
+/* Charts Row */
+.charts-row {
+    position: absolute;
+    left: 100px;
+    top: 775px;
+    display: flex;
+    gap: 20px;
+}
+
+.chart-container {
+    width: 610px;
+    height: 467px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.chart-container:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+.chart-title {
+    color: black;
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.chart-placeholder img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.chart-placeholder img:hover {
+    transform: scale(1.02);
+}
+
+/* Plots Row */
+.plots-row {
+    position: absolute;
+    left: 100px;
+    top: 1295px;
+    display: flex;
+    gap: 20px;
+}
+
+.plot-container {
+    width: 610px;
+    height: 405px;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.plot-container:nth-child(2) {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25);
+}
+
+.plot-container:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+.plot-title {
+    color: black;
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.plot-placeholder img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.plot-placeholder img:hover {
+    transform: scale(1.02);
+}
+
+/* Animations */
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideOut {
+    from { transform: translateX(0); opacity: 1; }
+    to { transform: translateX(100%); opacity: 0; }
+}
+
+/* Responsive Design */
+@media (max-width: 1440px) {
+    .dashboard-container {
+        width: 100%;
+        padding: 0 20px;
+    }
+    
+    .report-circle {
+        display: none;
+    }
+    
+    .main-title {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 768px) {
+    .metrics-row,
+    .charts-row,
+    .plots-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .dashboard-title {
+        font-size: 45px;
+    }
+    
+    .dashboard-subtitle {
+        font-size: 20px;
+        width: 100%;
+    }
+    
+    .metric-card,
+    .chart-container,
+    .plot-container {
+        width: 90%;
+    }
+}
+

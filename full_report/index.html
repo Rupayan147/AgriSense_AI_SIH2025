@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriSense AI - Analytics Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Header Section -->
+        <div class="header">
+            <img class="logo-icon" src="https://via.placeholder.com/55x50/4CAF50/white?text=🌱" alt="AgriSense Logo" />
+            <h1 class="logo-text">AgriSense AI</h1>
+        </div>
+        
+        <!-- Circular Full Report Display -->
+        <div class="report-circle">
+            <img src="https://via.placeholder.com/500x500/2E7D32/white?text=REPORT" alt="Full Report Display" />
+            <div class="report-label">FULL<br/>REPORT</div>
+        </div>
+        
+        <!-- Main Title Section -->
+        <div class="main-title">
+            <h1 class="dashboard-title">Analytics Dashboard</h1>
+            <p class="dashboard-subtitle">Monitor your farm's performance with real time data and insights</p>
+        </div>
+        
+        <!-- Search/Filter Bar -->
+        <div class="search-bar">
+            <button class="upload-btn" onclick="handleUpload()">
+                <span class="upload-icon">📁</span>
+                Upload Files
+            </button>
+        </div>
+        
+        <!-- Metric Cards Row -->
+        <div class="metrics-row">
+            <!-- Overall Crop Health Card -->
+            <div class="metric-card excellent">
+                <div class="metric-label">Overall Crop Health</div>
+                <div class="metric-value status-excellent">Excellent</div>
+            </div>
+            
+            <!-- Soil Temperature Card -->
+            <div class="metric-card moderate">
+                <div class="metric-label">Soil Temperature</div>
+                <div class="metric-value status-moderate">Moderate</div>
+            </div>
+            
+            <!-- Soil Moisture Card -->
+            <div class="metric-card low">
+                <div class="metric-label">Soil Moisture</div>
+                <div class="metric-value status-low">Low</div>
+            </div>
+            
+            <!-- Leaf Wetness Card -->
+            <div class="metric-card excellent">
+                <div class="metric-label">Leaf Wetness</div>
+                <div class="metric-value status-excellent">Excellent</div>
+            </div>
+        </div>
+        
+        <!-- Charts Section -->
+        <div class="charts-row">
+            <!-- Zone Distribution Chart -->
+            <div class="chart-container" onclick="viewChart('zone')">
+                <h3 class="chart-title">Zone Distribution</h3>
+                <div class="chart-placeholder">
+                    <img src="https://via.placeholder.com/580x400/E3F2FD/1976D2?text=Zone+Distribution+Analytics" alt="Zone Distribution Chart" />
+                </div>
+            </div>
+            
+            <!-- Heat Map Chart -->
+            <div class="chart-container" onclick="viewChart('heatmap')">
+                <h3 class="chart-title">Heat Map</h3>
+                <div class="chart-placeholder">
+                    <img src="https://via.placeholder.com/580x400/FFF3E0/F57C00?text=Temperature+Heat+Map" alt="Heat Map Chart" />
+                </div>
+            </div>
+        </div>
+        
+        <!-- Plot Charts Section -->
+        <div class="plots-row">
+            <!-- Plot 1 -->
+            <div class="plot-container" onclick="viewPlot(1)">
+                <h3 class="plot-title">Plot 1</h3>
+                <div class="plot-placeholder">
+                    <img src="https://via.placeholder.com/580x350/E8F5E8/2E7D32?text=Plot+1+Analysis" alt="Plot 1" />
+                </div>
+            </div>
+            
+            <!-- Plot 2 -->
+            <div class="plot-container" onclick="viewPlot(2)">
+                <h3 class="plot-title">Plot 2</h3>
+                <div class="plot-placeholder">
+                    <img src="https://via.placeholder.com/580x350/FCE4EC/C2185B?text=Plot+2+Analysis" alt="Plot 2" />
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
