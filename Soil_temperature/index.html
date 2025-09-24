@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriSense AI - Analytics Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Header Section -->
+        <div class="header">
+            <img class="logo-icon" src="https://via.placeholder.com/55x50/4CAF50/white?text=🌱" alt="AgriSense Logo" />
+            <h1 class="logo-text">AgriSense AI</h1>
+        </div>
+        
+        <!-- Circular Temperature Display -->
+        <div class="temperature-circle">
+            <img src="https://via.placeholder.com/500x500/2E7D32/white?text=TEMP" alt="Temperature Display" />
+            <div class="temperature-label">SOIL<br/>TEMPERATURE</div>
+        </div>
+        
+        <!-- Main Title Section -->
+        <div class="main-title">
+            <h1 class="dashboard-title">Analytics Dashboard</h1>
+            <p class="dashboard-subtitle">Monitor your farm's performance with real time data and insights</p>
+        </div>
+        
+        <!-- Search/Filter Bar -->
+        <div class="search-bar">
+            <button class="upload-btn" onclick="handleUpload()">
+                <span class="upload-icon">📁</span>
+                Upload Files
+            </button>
+        </div>
+        
+        <!-- Metric Cards Row -->
+        <div class="metrics-row">
+            <!-- Soil Temperature Card -->
+            <div class="metric-card">
+                <div class="metric-label">Soil Temperature</div>
+                <div class="metric-value warning">Low</div>
+            </div>
+            
+            <!-- Mean Card -->
+            <div class="metric-card">
+                <div class="metric-label">Mean</div>
+                <div class="metric-value">0.753</div>
+            </div>
+            
+            <!-- Standard Deviation Card -->
+            <div class="metric-card">
+                <div class="metric-label">Standard Deviation</div>
+                <div class="metric-value">0.173</div>
+            </div>
+            
+            <!-- Recommendation Card -->
+            <div class="metric-card recommendation-card">
+                <div class="metric-label">Recommendation</div>
+                <div class="warning-text">Soil Overheating risk of stress</div>
+                <button class="action-btn" onclick="takeAction()">Take Action</button>
+            </div>
+        </div>
+        
+        <!-- Charts Section -->
+        <div class="charts-row">
+            <!-- Zone Distribution Chart -->
+            <div class="chart-container">
+                <h3 class="chart-title">Zone Distribution</h3>
+                <div class="chart-placeholder">
+                    <img src="https://via.placeholder.com/580x400/E3F2FD/1976D2?text=Zone+Distribution+Chart" alt="Zone Distribution Chart" />
+                </div>
+            </div>
+            
+            <!-- Heat Map Chart -->
+            <div class="chart-container">
+                <h3 class="chart-title">Heat Map</h3>
+                <div class="chart-placeholder">
+                    <img src="https://via.placeholder.com/580x400/FFF3E0/F57C00?text=Heat+Map+Chart" alt="Heat Map Chart" />
+                </div>
+            </div>
+        </div>
+        
+        <!-- Plot Charts Section -->
+        <div class="plots-row">
+            <!-- Plot 1 -->
+            <div class="plot-container">
+                <h3 class="plot-title">Plot 1</h3>
+                <div class="plot-placeholder">
+                    <img src="https://via.placeholder.com/580x350/E8F5E8/2E7D32?text=Plot+1+Data" alt="Plot 1" />
+                </div>
+            </div>
+            
+            <!-- Plot 2 -->
+            <div class="plot-container">
+                <h3 class="plot-title">Plot 2</h3>
+                <div class="plot-placeholder">
+                    <img src="https://via.placeholder.com/580x350/FCE4EC/C2185B?text=Plot+2+Data" alt="Plot 2" />
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+

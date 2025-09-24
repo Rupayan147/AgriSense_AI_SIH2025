@@ -1,0 +1,335 @@
+/* AgriSense AI Dashboard - Complete Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-image: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    overflow-x: auto;
+}
+
+.dashboard-container {
+    width: 1440px;
+    height: 1800px;
+    position: relative;
+    margin: 0 auto;
+}
+
+/* Header Section */
+.header {
+    position: absolute;
+    left: 100px;
+    top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-icon {
+    width: 55px;
+    height: 50px;
+    border-radius: 8px;
+}
+
+.logo-text {
+    color: white;
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 45px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Temperature Circle */
+.temperature-circle {
+    position: absolute;
+    left: 1095px;
+    top: -151px;
+}
+
+.temperature-circle img {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 3px solid rgba(255,255,255,0.3);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+}
+
+.temperature-label {
+    position: absolute;
+    left: 45px;
+    top: 267px;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 45px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Main Title Section */
+.main-title {
+    position: absolute;
+    left: 346px;
+    top: 155px;
+    text-align: center;
+}
+
+.dashboard-title {
+    color: black;
+    font-size: 75px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(255,255,255,0.8);
+}
+
+.dashboard-subtitle {
+    width: 772px;
+    color: black;
+    font-size: 30px;
+    font-weight: 300;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+}
+
+/* Search Bar */
+.search-bar {
+    position: absolute;
+    left: 100px;
+    top: 395px;
+    width: 1240px;
+    height: 115px;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    backdrop-filter: blur(12.95px);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 40px;
+}
+
+.upload-btn {
+    width: 236px;
+    height: 50px;
+    background: #2CFF05;
+    border: none;
+    border-radius: 10px;
+    color: black;
+    font-size: 24px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.upload-btn:hover {
+    background: #25D900;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(44, 255, 5, 0.3);
+}
+
+.upload-icon {
+    font-size: 20px;
+}
+
+/* Metrics Row */
+.metrics-row {
+    position: absolute;
+    left: 100px;
+    top: 556px;
+    display: flex;
+    gap: 69px;
+}
+
+.metric-card {
+    width: 256px;
+    height: 150px;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.metric-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.recommendation-card {
+    border-left: 10px solid #EF4444;
+}
+
+.metric-label {
+    color: black;
+    font-size: 25px;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.metric-value {
+    color: black;
+    font-size: 45px;
+    font-weight: 700;
+}
+
+.metric-value.warning {
+    color: #EF4444;
+    font-weight: 900;
+}
+
+.warning-text {
+    color: #EF4444;
+    font-size: 20px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.action-btn {
+    width: 107px;
+    height: 34px;
+    background: #EF4444;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0 auto;
+    display: block;
+}
+
+.action-btn:hover {
+    background: #DC2626;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}
+
+/* Charts Row */
+.charts-row {
+    position: absolute;
+    left: 100px;
+    top: 775px;
+    display: flex;
+    gap: 20px;
+}
+
+.chart-container {
+    width: 610px;
+    height: 467px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.chart-container:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+.chart-title {
+    color: black;
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.chart-placeholder img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Plots Row */
+.plots-row {
+    position: absolute;
+    left: 100px;
+    top: 1295px;
+    display: flex;
+    gap: 20px;
+}
+
+.plot-container {
+    width: 610px;
+    height: 405px;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.plot-container:nth-child(2) {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25);
+}
+
+.plot-container:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+.plot-title {
+    color: black;
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.plot-placeholder img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 1440px) {
+    .dashboard-container {
+        width: 100%;
+        padding: 0 20px;
+    }
+    
+    .temperature-circle {
+        display: none;
+    }
+    
+    .main-title {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 768px) {
+    .metrics-row,
+    .charts-row,
+    .plots-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .dashboard-title {
+        font-size: 45px;
+    }
+    
+    .dashboard-subtitle {
+        font-size: 20px;
+        width: 100%;
+    }
+}
