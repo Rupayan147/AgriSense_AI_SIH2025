@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1440, initial-scale=1.0" />
+    <title>AgriSense AI — Landing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div id="frame-wrapper">
+    <main class="landing-frame" id="landing-frame">
+        <img class="bg-hero" src="assets/bg-hero.png" alt="Background" />
+
+        <!-- Top bar gradient and blur -->
+        <div class="top-blur"></div>
+
+        <!-- Logo block -->
+        <div class="logo-block">
+            <img src="assets/logo-360298.png" alt="AgriSense Logo" />
+        </div>
+
+        <!-- Right top CTA container -->
+        <div class="cta-container">
+            <span class="cta-text">Sign Up</span>
+        </div>
+
+        <!-- Header brand text -->
+        <div class="brand-text">AgriSense AI</div>
+
+        <!-- Hero heading -->
+        <h1 class="hero-heading">Bringing Innovation to Your Farming Journey</h1>
+
+        <!-- Hero subtext -->
+        <p class="hero-subtext">Harness the power of technology to optimize your crops, monitor soil health, and maximize yields sustainably</p>
+
+        <!-- Right content card -->
+        <section class="right-card">
+            <h2 class="section-title">Our Mission</h2>
+            <p class="section-copy">Empowering farmers with cutting-edge technology to create a sustainable future. We believe in precision agriculture that respects both productivity and environmental stewardship.</p>
+        </section>
+
+        <!-- Bottom left primary CTA -->
+        <button class="primary-cta">
+            <span>Get Started</span>
+            <img class="arrow" src="assets/icon-right-arrow.svg" alt="→" />
+        </button>
+    </main>
+    </div>
+    <script>
+    (function() {
+        const baseWidth = 1440;
+        const baseHeight = 1024;
+        const wrapper = document.getElementById('frame-wrapper');
+        const frame = document.getElementById('landing-frame');
+
+        function resize() {
+            const vw = window.innerWidth;
+            const vh = window.innerHeight;
+            // Use cover behavior to eliminate side gutters
+            const scale = Math.max(vw / baseWidth, vh / baseHeight);
+            frame.style.transform = 'scale(' + scale + ')';
+            frame.style.transformOrigin = 'top left';
+            wrapper.style.width = Math.max(baseWidth * scale, vw) + 'px';
+            wrapper.style.height = Math.max(baseHeight * scale, vh) + 'px';
+            wrapper.style.display = 'flex';
+            wrapper.style.alignItems = 'center';
+            wrapper.style.justifyContent = 'center';
+        }
+        window.addEventListener('resize', resize);
+        window.addEventListener('DOMContentLoaded', resize);
+        resize();
+    })();
+    </script>
+</body>
+</html>
+
