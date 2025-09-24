@@ -1,0 +1,73 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { font-family: 'Nunito', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: #000; }
+
+.canvas { position: relative; width: 1440px; height: 1800px; margin: 0 auto; overflow: hidden; }
+.bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+
+.logo { position: absolute; left: 114px; top: 28px; width: 55px; height: 50px; z-index: 2; }
+.brand { position: absolute; left: 185px; top: 30px; width: 155px; height: 45px; font-weight: 800; font-size: 25px; line-height: 1.8em; z-index: 2; }
+
+/* Restore larger hero sizes per Figma */
+.headline { position: absolute; left: 346px; top: 155px; width: 728px; height: 102px; margin: 0; font-weight: 700; font-size: 75px; text-align: left; z-index: 2; }
+.subhead { position: absolute; left: 332px; top: 257px; width: 772px; height: 82px; margin: 0; font-weight: 300; font-size: 30px; text-align: center; z-index: 2; }
+
+.glass.rectangle-3 { position: absolute; left: 100px; top: 395px; width: 1240px; height: 115px; background: rgba(255,255,255,0.25); -webkit-backdrop-filter: blur(25.9px); backdrop-filter: blur(25.9px); border-radius: 10px; z-index: 1; }
+
+.card { position: absolute; background: #FFFFFF; border-radius: 10px; z-index: 2; }
+.card-1 { left: 100px; top: 556px; width: 256px; height: 150px; }
+.card-2 { left: 425px; top: 556px; width: 256px; height: 150px; }
+.card-3 { left: 750px; top: 556px; width: 256px; height: 150px; }
+.card-4 { left: 1084px; top: 556px; width: 256px; height: 150px; }
+.card-4.bordered { box-shadow: inset 10px 0 0 0 #0000, inset 10px 0 0 0 #2386F6; }
+
+.panel { position: absolute; background: #FFFFFF; border-radius: 10px; box-shadow: 0 8px 15px rgba(0,0,0,0.25); z-index: 2; }
+.panel-left { left: 100px; top: 775px; width: 610px; height: 467px; }
+.panel-right { left: 730px; top: 775px; width: 610px; height: 467px; }
+.panel-left .panel-title { position: absolute; left: 28px; top: 22px; font-weight: 700; font-size: 16px; }
+.panel-right .panel-title { position: absolute; left: 22px; top: 22px; font-weight: 700; font-size: 16px; }
+
+.cloud-icon { position: absolute; left: 1095px; top: 431px; width: 35px; height: 35px; z-index: 3; }
+
+.metrics { position: absolute; left: 100px; top: 556px; width: 1240px; height: 150px; z-index: 3; pointer-events: none; }
+.metric-title, .metric-value, .metric-badge, .metric-note { position: absolute; }
+/* Metrics original scale and positions (local offsets) */
+.metric-title { font-weight: 900; font-size: 25px; }
+.metric-value { font-weight: 700; font-size: 45px; }
+.metric-badge { font-weight: 900; font-size: 45px; color: #2386F6; }
+.metric-note { font-weight: 800; font-size: 20px; color: #2386F6; }
+.metric-title:nth-of-type(1) { left: 50px; top: 21px; }
+.metric-title:nth-of-type(2) { left: 424px; top: 19px; }
+.metric-title:nth-of-type(3) { left: 665px; top: 19px; }
+.value-1 { left: 397px; top: 56px; }
+.value-2 { left: 718px; top: 56px; }
+.metric-badge { left: 26px; top: 56px; }
+.metric-note { left: 1017px; top: 67px; width: 207px; }
+
+/* Recommendation title global coordinates */
+.metric-reco-title { position: absolute; left: 1115px; top: 577px; width: 211px; height: 34px; font-weight: 900; font-size: 25px; }
+
+/* CTA under glass area */
+.cta { position: absolute; left: 1076px; top: 424px; width: 236px; height: 50px; display: flex; align-items: center; justify-content: center; gap: 8px; z-index: 4; }
+.cta-bg { position: absolute; inset: 0; background: #2CFF05; border-radius: 10px; }
+.cta-icon { position: relative; z-index: 1; width: 20px; height: 20px; }
+.cta-text { position: relative; z-index: 1; font-weight: 700; font-size: 24px; color: #000; height: 45px; display: flex; align-items: center; }
+.cta-sub { position: absolute; left: 1171px; top: 663px; font-weight: 800; font-size: 15px; z-index: 3; }
+
+.ellipse-wrap { 
+    position: absolute; 
+    left: 1300px; 
+    top: -172px; 
+    width: 500px; 
+    height: 500px; 
+    z-index: 1;
+    overflow: hidden;
+}
+
+
+/* bottom panels */
+.panel-bottom-left { left: 100px; top: 1295px; width: 610px; height: 405px; }
+.panel-bottom-right { left: 730px; top: 1295px; width: 610px; height: 405px; }
+.panel-bottom-title { position: absolute; font-weight: 700; font-size: 16px; }
+.panel-bottom-left .panel-bottom-title { left: 26px; top: 22px; }
+.panel-bottom-right .panel-bottom-title { left: 26px; top: 22px; }
